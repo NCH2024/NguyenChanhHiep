@@ -147,7 +147,7 @@ table {
 }
 
 body {
-    position: relative;
+    position: relative !important;
     background: var(--primary-color);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -443,8 +443,8 @@ header {
 =============================CSS for FOOTER============================
 */
 
-footer {
-    height: fit-content;
+.footer {
+    height: 20rem;
     width: 100vw;
     font-size: 1.2rem;
     font-weight: 200;
@@ -452,6 +452,9 @@ footer {
     text-indent: 1.5rem;
     color: var(--text);
     text-align: justify;
+    position: absolute;
+    bottom: -1;
+
 
 
     & .colGroup {
@@ -511,7 +514,6 @@ main {
 
     & .home {
         width: 102.7rem;
-        height: 100vh;
 
         & img {
             height: 100vh;
@@ -651,7 +653,7 @@ main {
 
     main {
         width: 100vw;
-        height: 72rem;
+        height: 100rem;
 
 
         & .home {
