@@ -149,6 +149,12 @@ table {
 body {
     position: relative;
     background: var(--primary-color);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 html {
@@ -195,7 +201,7 @@ a {
 }
 
 .backdrop-filter {
-    backdrop-filter: blur(2rem) brightness(120%);
+    backdrop-filter: blur(0.5rem) brightness(120%);
 }
 
 .textGradient {
@@ -342,6 +348,7 @@ header {
     & nav {
         width: 45rem;
         height: 4.5rem;
+        backdrop-filter: blur(0.9rem) !important;
     }
 
     & ul,
@@ -405,8 +412,93 @@ header {
                 0 0 102px #0fa,
                 0 0 151px #0fa;
         }
+
+        & .tipsBox {
+            position: absolute;
+            top: 8rem;
+            right: 3rem;
+            height: 25rem;
+            width: 25rem;
+            line-height: 2rem;
+            text-align: center;
+            background-color: var(--text-opacity);
+            display: none;
+
+            & img {
+                height: 15rem;
+                width: 15rem;
+                object-fit: contain;
+                margin-top: 3rem;
+            }
+        }
+
+        & .tipsBox.show {
+            display: block;
+        }
     }
 }
+
+
+/*
+=============================CSS for FOOTER============================
+*/
+
+footer {
+    height: fit-content;
+    width: 100vw;
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    text-indent: 1.5rem;
+    color: var(--text);
+    text-align: justify;
+
+
+    & .colGroup {
+        height: 13rem;
+        width: 102.7rem;
+        margin: 0 auto;
+        flex: 1;
+        flex-wrap: wrap;
+
+
+
+        & .col {
+            height: 95%;
+            width: 20%;
+            padding: 1rem;
+        }
+
+        & .col:last-child {
+            flex-basis: 100%;
+            height: 3rem;
+            display: grid;
+            place-items: center;
+        }
+
+        & .col:nth-of-type(2) {
+            & ul>li {
+                line-height: 2rem;
+                font-weight: 400;
+            }
+        }
+
+        & .col:nth-of-type(3) {
+            flex-direction: column;
+            text-indent: 0;
+
+            & img {
+                margin: 1rem;
+                height: 3rem;
+                width: 3rem;
+                object-fit: contain;
+                background-position: center center;
+            }
+        }
+    }
+
+}
+
 
 /*
 ==============================CSS for MAIN home=========================
@@ -543,6 +635,19 @@ main {
         }
     }
 
+    footer {
+
+        & .colGroup {
+            height: fit-content;
+            width: 100vw;
+
+            & .col {
+                width: 80%;
+                height: fit-content;
+            }
+        }
+    }
+
     main {
         width: 100vw;
         height: 100rem;
@@ -578,6 +683,11 @@ main {
         justify-content: center !important;
     }
 
+    .tipsBox {
+        position: absolute !important;
+        right: 10rem !important;
+    }
+
     & nav {
         width: fit-content;
         height: 100%;
@@ -604,6 +714,22 @@ main {
         bottom: -4rem;
         right: -5rem;
         width: 10rem;
+    }
+
+    footer {
+        background: var(--primary-color);
+        font-size: 1rem;
+
+        & .colGroup {
+            height: fit-content;
+            width: 100vw;
+
+            & .col {
+                width: 80%;
+                height: fit-content;
+                padding: 0.5rem;
+            }
+        }
     }
 
     main {
