@@ -158,7 +158,7 @@ body {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 52.5%;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -505,6 +505,7 @@ footer {
 */
 main {
     width: 102.7rem;
+    height: 72rem;
     margin: 0 auto;
     position: relative;
 
