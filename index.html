@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Insert animation css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Insert AOS animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div id="header"></div>
@@ -20,30 +24,29 @@
     <main>
         <div class="home">
             <img src="assets/images/home/bg-home.jpg" alt="background">
-
             <div class="hello flex-center">
-                <div class="infoIndex border flex-center">
+                <div class="infoIndex border flex-center animate__animated animate__flash">
                     <i class="fa-solid fa-circle-dot"></i>
                     <p class="textGradient">Always online</p>
                 </div>
     
-                <div class="textHello">
+                <div class="textHello animate__animated animate__backInDown">
                     <p>XIN CHÀO!</p>
                     <p class="textGradient">Chúc một ngày vui vẻ!</p>
                 </div>
             </div>
 
             <div class="detailMain flex-center">
-                <div class="detailMain-left border backdrop-filter">
+                <div class="detailMain-left border backdrop-filter animate__animated animate__slideInLeft">
                     <img src="assets/images/home/me-Home.png" alt="Nguyen Chanh Hiep" class="objectShadow">
                 </div>
 
-                <div class="detailMain-right border backdrop-filter flex-center">
+                <div class="detailMain-right border backdrop-filter flex-center animate__animated animate__slideInRight animate__delay-1s">
                     <p>"Xin chào! Tôi là Nguyễn Chánh Hiệp, sinh viên ngành Công nghệ Thông tin - Trường Đại học Nam Cần Thơ. Tôi đam mê công nghệ và luôn khao khát trở thành chuyên gia trong lĩnh vực này."</p>
                     <p>"Hello! I am Nguyen Chanh Hiep, a student majoring in Information Technology at Nam Can Tho University. I am passionate about technology and always aspire to become an expert in this field."</p>
                 </div>
                 
-                <a href="#" class="btn btnHome">
+                <a href="intro.html" class="btn btnHome animate__animated animate__slideInUp animate__delay-2s">
                     <div>XEM THÊM</div>
                     <svg fill="none" viewBox="0 0 24 24" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" stroke="black" d="M11.6801 14.62L14.2401 12.06L11.6801 9.5"></path>
@@ -72,6 +75,17 @@
             .catch(error => console.error('Lỗi khi tải footer:', error));
     </script>
 
+    <!--insert AOS script-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+    useClassNames: true,
+    initClassName: false,
+    animatedClassName: 'animate__animated',
+    });
+    </script>
+
+    <!--Insert main script-->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
