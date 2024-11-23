@@ -1,0 +1,651 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none !important;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+==============================CSS for pages================================
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #c6d2fa;
+    --text-opacity: #c6d2fa44;
+    --shadow-text-opacity: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(198, 210, 250, 0.4) 83%);
+    --primary-color: #00020D;
+    --second-color: #27e6b9;
+    --highlight-color: #75ff35;
+}
+
+body {
+    position: relative;
+    background: var(--primary-color);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*
+==============================CSS GROUP================================
+*/
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+.border {
+    border: 1px solid var(--text-opacity);
+    border-top: 1px solid var(--shadow-text-opacity);
+    border-radius: 2rem;
+}
+
+.backdrop-filter {
+    backdrop-filter: blur(2rem) brightness(120%);
+}
+
+.textGradient {
+    background-image: linear-gradient(80deg, #00c9ff 0%, #92fe9d 100%);
+    display: inline-block;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.textShadow {
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.objectShadow {
+    filter: drop-shadow(0.8rem 0 0.8rem var(--primary-color));
+}
+
+/* From Uiverse.io by catraco */
+.btn {
+    --color: #ffcd39;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    border: none;
+    background-color: transparent;
+}
+
+.btn div {
+    letter-spacing: 2px;
+    font-weight: bold;
+    background: var(--color);
+    border-radius: 2rem;
+    color: black;
+    padding: 1rem;
+}
+
+.btn::before {
+    content: '';
+    z-index: -1;
+    background-color: var(--color);
+    border: 2px solid black;
+    border-radius: 2rem;
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    transform: rotate(10deg);
+    transition: .5s;
+    opacity: 0.2;
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+    transform: scale(1.1);
+}
+
+.btn:hover::before {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.btn svg {
+    transform: translateX(-200%);
+    transition: .5s;
+    width: 0;
+    opacity: 0;
+}
+
+.btn:hover svg {
+    width: 25px;
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.btn:active {
+    filter: brightness(1.4);
+}
+
+/*
+==============================CSS for HEADER================================
+*/
+
+header {
+    height: 8rem;
+    width: 100vw;
+    font-size: 1.3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-weight: 500;
+    background-color: linear-gradient(180deg, rgba(0, 2, 13, 1) 67%, rgba(255, 255, 255, 0) 100%) !important;
+    color: var(--text);
+    justify-content: space-between !important;
+    position: fixed;
+    z-index: 1000000;
+
+    & .info {
+        height: 90%;
+        width: 20rem;
+        font-size: 1rem;
+        transition: all 400ms ease-in-out;
+
+        & img {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 5rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+
+        & .-detail-info {
+            padding-left: 1rem;
+        }
+
+        & p {
+            font-weight: 400;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        & span {
+            font-size: 1rem;
+            color: var(--highlight-color);
+        }
+
+        &:hover {
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
+    }
+
+    & nav {
+        width: 45rem;
+        height: 4.5rem;
+    }
+
+    & ul,
+    li {
+        width: 45rem;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        transition: all 400ms ease-in-out;
+
+        &:hover {
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
+
+        &:hover> :not(:hover) {
+            filter: blur(0.5rem);
+        }
+    }
+
+
+    & ol,
+    li {
+        list-style: none;
+    }
+
+    & .tips {
+        height: 3rem;
+        width: 20rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 400ms ease-in-out;
+
+        & p {
+            margin-left: 1rem;
+            font-weight: 500;
+        }
+
+        & i {
+            font-size: 2rem;
+            color: var(--highlight-color);
+        }
+
+        &:hover {
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 82px #0fa,
+                0 0 92px #0fa,
+                0 0 102px #0fa,
+                0 0 151px #0fa;
+        }
+    }
+}
+
+/*
+==============================CSS for MAIN home=========================
+*/
+main {
+    width: 102.7rem;
+    margin: 0 auto;
+    position: relative;
+
+    & .home {
+        width: 102.7rem;
+        height: 100vh;
+
+        & img {
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        & .hello {
+            position: absolute;
+            top: 10rem;
+            height: 30rem;
+            width: 102.7rem;
+            flex-direction: column;
+            color: var(--text);
+
+            & .infoIndex {
+                padding: 0.5rem;
+                width: 10rem;
+                margin-bottom: 3rem;
+                justify-content: space-around;
+
+                & i {
+                    color: var(--highlight-color);
+                }
+            }
+
+            & .textHello {
+                text-align: center;
+                font-size: 4rem;
+                line-height: 5rem;
+                font-weight: 600;
+            }
+        }
+
+        & .detailMain {
+            position: absolute;
+            top: 40rem;
+            width: 102.7rem;
+            height: 25rem;
+            justify-content: space-between !important;
+
+            & .detailMain-left,
+            .detailMain-right {
+                height: 25rem;
+            }
+
+            & .detailMain-left {
+                width: 28%;
+
+                & img {
+                    position: absolute;
+                    top: -3.2rem;
+                    height: 28rem;
+                    width: 100%;
+                    object-fit: contain;
+                }
+
+                & p {
+                    position: absolute;
+                    top: 10rem;
+                    left: 2rem;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }
+
+            & .detailMain-right {
+                width: 70%;
+                padding: 2rem;
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: white;
+                text-align: center;
+                line-height: 2.5rem;
+                flex-direction: column;
+                text-shadow: 1px 1px 4px var(--primary-color);
+
+                & p:last-child {
+                    font-size: 1.3rem;
+                    line-height: 2rem;
+                    font-weight: 300;
+                    margin-top: 2rem;
+                }
+
+            }
+        }
+
+        & .btnHome {
+            position: absolute;
+            bottom: -5rem;
+            font-size: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/*
+==========================CSS FIX MOBILE AND TABLET============================
+*/
+
+@media only screen and (max-width:1203px) and (min-width:740px) {
+    header {
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 11rem;
+        align-items: flex-start !important;
+        position: relative;
+        padding-top: 1rem;
+
+        & .info {
+            height: 4rem;
+        }
+
+        & nav {
+            position: absolute;
+            top: 5.5rem;
+            width: 90%;
+        }
+    }
+
+    main {
+        width: 100vw;
+        height: 100rem;
+
+
+        & .home {
+            & .hello {
+                width: 100vw;
+            }
+
+            & .detailMain {
+                width: 100vw;
+                flex-wrap: wrap;
+                height: 52rem;
+
+                & .detailMain-left,
+                .detailMain-right {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:739px) {
+    header {
+        left: 0;
+        height: 4rem;
+        padding: 0;
+        width: 100vw;
+        justify-content: center !important;
+    }
+
+    & nav {
+        width: fit-content;
+        height: 100%;
+        font-size: 1.2rem;
+        border: none !important;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    & a,
+    li {
+        width: fit-content !important;
+        margin: 0.5rem;
+    }
+
+    & .info {
+        position: absolute;
+        bottom: -4rem;
+        left: 0;
+    }
+
+    & .tips {
+        position: absolute;
+        bottom: -4rem;
+        right: -5rem;
+        width: 10rem;
+    }
+
+    main {
+        width: 100vw;
+        height: 100rem;
+
+
+        & .home {
+            width: 100vw;
+
+            & .hello {
+                width: 100vw;
+
+                & .textHello {
+                    & p:last-child {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            & .detailMain {
+                width: 100vw;
+                flex-wrap: wrap;
+                height: 52rem;
+
+                & .detailMain-left,
+                .detailMain-right {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                & .detailMain-right {
+                    & p {
+                        font-size: 1.3rem;
+                        line-height: 2rem;
+                    }
+
+                    & p:last-child {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
