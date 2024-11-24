@@ -17,7 +17,7 @@ document.addEventListener('click', function (event) {
 });
 
 
-//Block click right mouse
+//Block click right mouse F12
 window.onload = function () {
     document.addEventListener("contextmenu", function (e) {
         e.preventDefault();
