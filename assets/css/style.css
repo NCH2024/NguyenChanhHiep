@@ -738,6 +738,23 @@ main {
         }
 
     }
+
+    .skill {
+        margin-left: auto;
+        margin-right: auto;
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .bannerSkill {
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .infoSkill {
+        width: 100vw;
+        margin: 0 3rem;
+    }
 }
 
 @media screen and (max-width:739px) {
@@ -902,6 +919,35 @@ main {
 
         & span {
             font-size: 1.3rem;
+        }
+    }
+
+
+    .skill {
+        margin-left: auto;
+        margin-right: auto;
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .bannerSkill {
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .infoSkill {
+        width: 100vw;
+        margin: 0 3rem;
+
+        font-size: 1rem;
+
+        & strong {
+            font-size: 1.2rem !important;
+        }
+
+        & p {
+            font-size: 1.2rem !important;
+            text-align: justify;
         }
     }
 }
@@ -1195,6 +1241,7 @@ main {
     height: 30rem;
     width: 102.7rem;
     backdrop-filter: blur(1rem) brightness(50%);
+    border: none !important;
     color: var(--text);
     position: relative;
 
@@ -1244,4 +1291,87 @@ main {
             color: var(--second-color);
         }
     }
+}
+
+.skill {
+    margin-top: 2rem;
+    height: fit-content;
+    width: 102.7rem;
+    backdrop-filter: blur(1rem) brightness(30%);
+    border: none !important;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--second-color);
+    padding: 3rem 0;
+    text-align: center;
+    flex-direction: column;
+
+
+    & .infoSkill {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--text);
+    }
+}
+
+
+.bannerSkill {
+    margin: 2rem 0;
+    height: 6rem;
+    width: 102.7rem;
+    background-color: var(--text);
+    overflow: hidden;
+    --gap: 1rem;
+    gap: var(--gap);
+    position: relative;
+}
+
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    min-width: 100%;
+    justify-content: space-around;
+    animation: scroll 10s linear infinite;
+}
+
+.svgLogo {
+    height: 5rem;
+    width: 5rem;
+    object-fit: contain;
+}
+
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.infoSkill ol {
+    height: fit-content;
+    width: 100%;
+    list-style: decimal !important;
+    text-align: left;
+    font-weight: 200;
+    line-height: 2rem;
+    padding: 0 5rem;
+
+    & p {
+        font-style: italic;
+        text-indent: 3rem;
+        padding-bottom: 1.5rem;
+    }
+
+    & strong {
+        font-weight: 500;
+        color: var(--second-color);
+        font-style: normal;
+    }
+
 }
