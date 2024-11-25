@@ -468,6 +468,7 @@ header {
     text-indent: 1.5rem;
     color: var(--text);
     text-align: justify;
+    background-color: var(--primary-color);
 
     & .colGroup {
         height: 13rem;
@@ -762,6 +763,10 @@ main {
         width: 100vw;
         margin: 0 3rem;
     }
+
+    .infoSkill-soft {
+        width: 100vw;
+    }
 }
 
 @media screen and (max-width:739px) {
@@ -955,6 +960,162 @@ main {
         & p {
             font-size: 1.2rem !important;
             text-align: justify;
+        }
+    }
+
+    .infoSkill-soft {
+        width: 100vw !important;
+        height: fit-content;
+    }
+
+
+    #slideShow {
+        height: 10rem !important;
+        width: 20rem !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide-wrapper {
+        display: flex;
+        /* Quan trọng để tất cả slide nằm ngang */
+        width: calc(5 * 20rem) !important;
+        /* 5 là số lượng slide */
+        animation: slide 10s ease infinite;
+        /* Thời gian chạy */
+    }
+
+    .slide {
+        flex: 0 0 auto;
+        /* Đảm bảo mỗi slide chiếm không gian cố định */
+        width: 10rem !important;
+        height: 20rem !important;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+
+    /* Animation keyframes */
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+            /* Hình 1 */
+        }
+
+        15% {
+            transform: translateX(0);
+            /* Hình 1 */
+        }
+
+        25% {
+            transform: translateX(-20rem);
+            /* Hình 2 */
+        }
+
+        30% {
+            transform: translateX(-20rem);
+            /* Hình 2 */
+        }
+
+        45% {
+            transform: translateX(-40rem);
+            /* Hình 3 */
+        }
+
+        50% {
+            transform: translateX(-40rem);
+            /* Hình 3 */
+        }
+
+        65% {
+            transform: translateX(-60rem);
+            /* Hình 4 */
+        }
+
+        75% {
+            transform: translateX(-60rem);
+            /* Hình 4 */
+        }
+
+        80% {
+            transform: translateX(-80rem);
+            /* Hình 5 */
+        }
+
+        95% {
+            transform: translateX(-80rem);
+            /* Hình 5 */
+        }
+
+        100% {
+            transform: translateX(0);
+            /* Quay về hình đầu */
+        }
+    }
+
+
+    .infoSkill-soft-slide {
+        width: 100%;
+        height: fit-content;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .popup-soft-skill {
+        height: 3rem !important;
+        width: 15rem !important;
+        padding-right: 1rem;
+        background-color: var(--highlight-color);
+        border-radius: 2rem;
+        justify-content: space-between;
+        position: absolute;
+        top: 10%;
+        left: 5% !important;
+
+        & p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        & .icon-popup {
+            height: 3rem !important;
+            width: 3rem !important;
+            background-color: red;
+            color: var(--highlight-color);
+            font-size: 1.2rem;
+            font-weight: 800;
+            border-radius: 2rem;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+
+    .infoSkill-soft-content {
+        height: fit-content;
+        width: 100% !important;
+        text-align: left;
+
+        & .soft-name,
+        .soft-name-content {
+            font-size: 1rem !important;
+            font-weight: 400;
+            color: white;
+        }
+
+        & .soft-name {
+            font-size: 1.2rem !important;
+            text-indent: 3rem;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        & .soft-name-content {
+            text-align: justify;
+            line-height: 2rem;
         }
     }
 }
@@ -1513,5 +1674,31 @@ main {
         border-radius: 2rem;
         display: grid;
         place-items: center;
+    }
+}
+
+.infoSkill-soft-content {
+    height: fit-content;
+    width: 100%;
+    padding: 0 20%;
+    text-align: left;
+
+    & .soft-name,
+    .soft-name-content {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: white;
+    }
+
+    & .soft-name {
+        font-size: 1.7rem;
+        text-indent: 3rem;
+        color: var(--text);
+        font-weight: 700;
+    }
+
+    & .soft-name-content {
+        text-align: justify;
+        line-height: 2rem;
     }
 }
