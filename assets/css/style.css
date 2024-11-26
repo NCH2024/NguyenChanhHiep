@@ -1485,3 +1485,210 @@ main {
         }
     }
 }
+
+/*
+===================================== PROJECT PAGE ==================================
+*/
+
+.project {
+    width: var(--width-default);
+    height: fit-content;
+
+    & .project-content {
+        width: 100%;
+        height: fit-content;
+        font-size: 1.3rem;
+        font-weight: 500;
+        align-items: flex-start;
+        border: 1px solid var(--text-opacity);
+        margin-bottom: 3rem;
+
+        & .col-name {
+            width: 20%;
+            height: 100%;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--highlight-color);
+            text-align: center;
+            padding: 4rem 0;
+
+            & i {
+                padding: 1rem;
+            }
+        }
+
+        & .project-content-group {
+            width: 80%;
+            height: fit-content;
+            padding: 2rem;
+            flex-direction: column;
+            border-left: var(--text-opacity) 1px solid;
+
+            & .carousel {
+                position: relative;
+                height: fit-content;
+                width: fit-content;
+                padding: 1rem;
+                background-color: var(--text-opacity) !important;
+
+                & img {
+                    height: 35rem;
+                    width: 70rem;
+                    object-fit: cover;
+                    background-position: center center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                & .prev,
+                .next {
+                    position: absolute;
+                    font-size: 4rem;
+                    color: var(--highlight-color);
+                    border-radius: 2rem;
+                    transition: all 200ms ease;
+                    height: 4rem;
+                    width: 4rem;
+                    display: grid;
+                    place-items: center;
+                    top: 50%;
+
+                    &:hover {
+                        background-color: var(--text-opacity);
+                        border: 1px solid var(--highlight-color);
+                    }
+                }
+
+                & .prev {
+                    left: -2.5rem;
+                }
+
+                & .next {
+                    right: -2.5rem;
+                }
+            }
+
+            & .content-after {
+                height: fit-content;
+                width: 80%;
+                padding: 2rem 0;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: white;
+
+                & .content-after-name {
+                    font-size: 2.2rem;
+                    color: var(--second-color);
+                    font-weight: 800;
+                    padding: 2rem 0;
+                }
+
+                & .content-after-info {
+
+                    & p:first-of-type,
+                    p:nth-of-type(2) {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+
+                        & span {
+                            font-weight: 800;
+                            color: var(--second-color);
+                        }
+                    }
+
+                    & p:nth-of-type(2)>a {
+                        font-style: italic;
+                        font-weight: 400;
+                        color: var(--highlight-color);
+                    }
+
+                    & p {
+                        font-size: 1.8rem;
+                        padding: 1rem 0;
+                        text-align: justify;
+                        text-indent: 3rem;
+                        line-height: 2.2rem;
+                    }
+
+                }
+            }
+        }
+
+        & .TaiLieuHocPhan-name {
+            font-size: 1.4rem;
+            color: var(--highlight-color);
+            font-weight: 700;
+            line-height: 3rem;
+            text-align: center;
+            padding: 3rem;
+
+            & span {
+                font-size: 2.5rem;
+            }
+        }
+
+        & .ds-TaiLieuHocPhan {
+            font-size: 1.8rem;
+            color: var(--text);
+            line-height: 3rem;
+            list-style: circle !important;
+        }
+    }
+}
+
+.btn-Tailieu {
+    position: fixed;
+    top: calc(100vh - 70%);
+    right: 3%;
+    height: 4rem;
+    width: 20rem;
+    background-color: var(--text-opacity);
+    border-radius: 2rem;
+    display: block;
+    pointer-events: all !important;
+
+    &:hover p {
+        color: var(--highlight-color);
+    }
+
+    & a {
+        justify-content: space-between;
+    }
+
+    & .icon {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 2rem;
+        background-color: var(--highlight-color);
+        color: var(--primary-color);
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    & p {
+        font-size: 1.4rem;
+        color: var(--text);
+        padding-right: 1rem;
+    }
+
+    & #cancel-tailieu {
+        height: 2rem;
+        width: 2rem;
+        font-size: 1.5rem;
+        color: white;
+        background-color: red;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -0.5rem;
+        right: -1rem;
+        display: none;
+    }
+}
+
+.btn-Tailieu:hover #cancel-tailieu {
+    display: flex;
+    /* Hiện dấu X */
+}

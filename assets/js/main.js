@@ -56,3 +56,53 @@ window.onload = function () {
         return false;
     }
 };
+
+
+/* Carousel */
+// CAROUSEL SLIDE
+
+//CAROUSEL QUẢNG CÁO
+var images = [
+    "assets/images/project/web-BanSach-DanhMuc.png",
+    "assets/images/project/web-BanSach-ChiTiet.png",
+    "assets/images/project/web-BanSach-News.png",
+    "assets/images/project/web-BanSach-ThongBao.png",
+    "assets/images/project/web-BanSach-Longin.png",
+    "assets/images/project/web-BanSach-AdminHome.png",
+    "assets/images/project/web-BanSach-AdminTool.png",
+];
+
+var num = 0;
+function Next() {
+    var slider = document.getElementById("slider");
+    num++;
+    if (num >= images.length) {
+        num = 0;
+    }
+
+    slider.src = images[num];
+}
+
+function Prev() {
+    var slider = document.getElementById("slider");
+    num--;
+    if (num < 0) {
+        num = images.length - 1;
+    }
+
+    slider.src = images[num];
+}
+
+setInterval("Next()", 2000);
+
+/* cancel tai lieu*/
+
+// Lấy phần tử "btn-Tailieu" và nút "cancel-tailieu"
+const btnTailieu = document.querySelector('.btn-Tailieu');
+const cancelTailieu = document.getElementById('cancel-tailieu');
+
+// Thêm sự kiện "click" vào nút "cancel-tailieu"
+cancelTailieu.addEventListener('click', function () {
+    // Ẩn phần tử "btn-Tailieu" bằng cách đặt `display` thành `none`
+    btnTailieu.style.display = 'none';
+});
