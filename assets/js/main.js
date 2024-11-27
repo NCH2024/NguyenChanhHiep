@@ -124,35 +124,35 @@ document.querySelectorAll(".HocPhan").forEach((item) => {
 
 
 /* Save cache brower */
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('js/service-worker.js')
-            .then((registration) => {
-                console.log('Service Worker đã được đăng ký: ', registration.scope);
-            }).catch((error) => {
-                console.log('Đăng ký Service Worker thất bại: ', error);
-            });
-    });
-}
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', () => {
+//         navigator.serviceWorker.register('js/service-worker.js')
+//             .then((registration) => {
+//                 console.log('Service Worker đã được đăng ký: ', registration.scope);
+//             }).catch((error) => {
+//                 console.log('Đăng ký Service Worker thất bại: ', error);
+//             });
+//     });
+// }
 
 /* Toi uu load anh */
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll('img[data-src]');
+// document.addEventListener("DOMContentLoaded", function () {
+//     const images = document.querySelectorAll('img[data-src]');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const image = entry.target;
-                image.src = image.getAttribute('data-src');
-                observer.unobserve(image);
-            }
-        });
-    }, {
-        rootMargin: '0px 0px 100px 0px'
-    });
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 const image = entry.target;
+//                 image.src = image.getAttribute('data-src');
+//                 observer.unobserve(image);
+//             }
+//         });
+//     }, {
+//         rootMargin: '0px 0px 100px 0px'
+//     });
 
 
-    images.forEach(image => {
-        observer.observe(image);
-    });
-});
+//     images.forEach(image => {
+//         observer.observe(image);
+//     });
+// });
