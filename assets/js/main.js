@@ -113,5 +113,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/*Open list */
+
+document.querySelectorAll(".HocPhan").forEach((item) => {
+    item.addEventListener("click", function () {
+        this.classList.toggle("open"); // Thêm hoặc xóa class 'open'
+    });
+});
+
+
 
 
