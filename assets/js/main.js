@@ -114,14 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*Open list */
-
-window.onload = function () {
-    document.querySelectorAll(".HocPhan").forEach((item) => {
-        item.addEventListener("click", function () {
-            this.classList.toggle("open"); // Thêm hoặc xóa class 'open'
-        });
+document.querySelectorAll(".HocPhan").forEach((item) => {
+    item.addEventListener("click", function () {
+        this.classList.toggle("open"); // Thêm hoặc xóa class 'open'
     });
-};
+});
 
 
 
