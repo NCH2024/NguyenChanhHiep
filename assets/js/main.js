@@ -95,14 +95,23 @@ function Prev() {
 
 setInterval("Next()", 2000);
 
-/* cancel tai lieu*/
 
-// Lấy phần tử "btn-Tailieu" và nút "cancel-tailieu"
-const btnTailieu = document.querySelector('.btn-Tailieu');
-const cancelTailieu = document.getElementById('cancel-tailieu');
+/* cancel tailieu, phanmem */
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy tất cả các nút có class btn-Tailieu và btn-Tailieu2
+    const btnsTailieu = document.querySelectorAll('.btn-Tailieu, .btn-Tailieu2');
 
-// Thêm sự kiện "click" vào nút "cancel-tailieu"
-cancelTailieu.addEventListener('click', function () {
-    // Ẩn phần tử "btn-Tailieu" bằng cách đặt `display` thành `none`
-    btnTailieu.style.display = 'none';
+    // Duyệt qua từng nút và thêm sự kiện click vào dấu X
+    btnsTailieu.forEach(function (btn) {
+        const cancelBtn = btn.querySelector('#cancel-tailieu');
+
+        // Khi click vào nút cancel, sẽ ẩn nút
+        cancelBtn.addEventListener('click', function (event) {
+            event.stopPropagation();  // Dừng sự kiện truyền ra ngoài
+            btn.style.display = 'none';  // Ẩn nút
+        });
+    });
 });
+
+
+

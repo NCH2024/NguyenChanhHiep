@@ -638,501 +638,6 @@ main {
 }
 
 /*
-==========================CSS FIX MOBILE AND TABLET============================
-*/
-
-@media only screen and (max-width:1203px) and (min-width:740px) {
-    header {
-        flex-wrap: wrap;
-        width: 100vw;
-        height: 3rem;
-        align-items: flex-start;
-        background: var(--primary-color);
-        position: fixed;
-        padding-top: 0.5rem;
-        line-height: 0.5rem;
-
-        & .info {
-            height: fit-content;
-
-            & img {
-                height: 2.5rem;
-                width: 2.5rem;
-            }
-
-            & p {
-                font-size: 1rem;
-            }
-
-            & span {
-                font-size: 0.8rem;
-            }
-        }
-
-        & nav {
-            position: absolute;
-            top: 2.5rem;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 80%;
-            font-size: 1.4rem;
-        }
-
-        & .tips {
-            & i {
-                font-size: 1.2rem;
-            }
-        }
-    }
-
-    footer {
-        background: var(--primary-color);
-        font-size: 1rem;
-        height: fit-content !important;
-        padding: 2rem !important;
-
-        & .colGroup {
-            height: 20% !important;
-            width: 80% !important;
-
-            & .col {
-                width: 60% !important;
-                height: fit-content !important;
-                padding: 0.5rem;
-            }
-        }
-    }
-
-    main {
-        width: 100vw;
-        height: fit-content;
-
-        & .home {
-
-            & .hello {
-                width: 100vw;
-            }
-
-            & .detailMain {
-                width: 100vw;
-                flex-wrap: wrap;
-                height: 52rem;
-
-                & .detailMain-left,
-                .detailMain-right {
-                    width: 80%;
-                    margin: 0 auto;
-                }
-            }
-        }
-    }
-
-    .infoMe {
-        height: 20rem;
-        width: 70rem !important;
-        flex-wrap: wrap;
-        flex: 1;
-        margin: 0 auto;
-
-        & .infoMe-Box:first-of-type {
-            width: fit-content;
-            height: fit-content;
-
-            & img {
-                height: 40rem;
-                width: 30rem;
-            }
-        }
-
-        & .infoMe-Box:last-of-type {
-            height: fit-content;
-            position: absolute;
-            right: 0;
-
-            & p {
-                font-size: 1.2rem;
-                line-height: 1.2rem;
-            }
-        }
-
-    }
-
-    .skill {
-        margin-left: auto;
-        margin-right: auto;
-        height: fit-content;
-        width: 100vw !important;
-    }
-
-    .bannerSkill {
-        height: fit-content;
-        width: 100vw !important;
-    }
-
-    .infoSkill {
-        width: 100vw;
-        margin: 0 3rem;
-    }
-
-    .infoSkill-soft {
-        width: 100vw;
-    }
-}
-
-@media screen and (max-width:739px) {
-    header {
-        background: var(--primary-color);
-        left: 0;
-        height: 4rem;
-        padding: 0;
-        width: 100vw;
-        justify-content: center;
-
-        & .info {
-            position: absolute;
-            top: 4rem !important;
-            left: 0.5rem;
-            width: fit-content;
-            height: fit-content;
-
-            & img {
-                height: 2rem;
-                width: 2rem;
-
-            }
-
-            & p,
-            span {
-                font-size: 0.8rem;
-            }
-        }
-
-        & .tips {
-            position: absolute;
-            top: 4rem !important;
-            right: 2rem;
-            width: fit-content;
-            height: fit-content;
-            font-size: 0.8rem;
-        }
-
-        & nav {
-            height: fit-content;
-            width: 100%;
-            font-size: 1.2rem;
-            border: none !important;
-            justify-content: space-evenly !important;
-
-            & ul>li {
-                width: fit-content;
-                padding: 2% 2%;
-                border: 1px solid var(--text-opacity);
-                border-radius: 2rem;
-            }
-        }
-
-
-    }
-
-    footer {
-        background: var(--primary-color);
-        font-size: 1rem;
-        height: fit-content !important;
-        padding: 2rem !important;
-
-        & .colGroup {
-            height: 20% !important;
-            width: 80% !important;
-
-            & .col {
-                width: 100% !important;
-                height: fit-content !important;
-                padding: 0.5rem;
-                font-size: 1.1rem;
-            }
-
-            & .col:last-child {
-                text-align: center;
-            }
-        }
-    }
-
-    main {
-        width: 100vw;
-        height: fit-content;
-
-
-        & .home {
-            width: 100vw;
-
-            & .hello {
-                width: 100vw;
-
-                & .textHello {
-                    & p:last-child {
-                        font-size: 2rem;
-                    }
-                }
-            }
-
-            & .detailMain {
-                width: 100vw;
-                flex-wrap: wrap;
-                height: 52rem;
-
-                & .detailMain-left,
-                .detailMain-right {
-                    width: 80%;
-                    margin: 0 auto;
-                }
-
-                & .detailMain-right {
-                    & p {
-                        font-size: 1.3rem;
-                        line-height: 2rem;
-                    }
-
-                    & p:last-child {
-                        font-size: 0.9rem;
-                    }
-                }
-            }
-
-            & .btnHome {
-                margin: 2rem auto !important;
-            }
-        }
-    }
-
-    .infoMe {
-        margin-top: 18rem !important;
-        height: fit-content !important;
-        width: 100vw !important;
-        flex-wrap: wrap;
-        flex: 1;
-    }
-
-    .infoMe-Box {
-        width: 100% !important;
-        position: static !important;
-    }
-
-    .textHello {
-        z-index: 1;
-    }
-
-    .infoMe-Box:first-of-type img {
-        height: 30rem !important;
-        width: 30rem !important;
-        object-fit: cover;
-        background-position: center center;
-        position: absolute !important;
-        top: -30rem !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto !important;
-        z-index: -100;
-    }
-
-    .infoMe-Box:last-of-type p {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-        padding-bottom: 0.5rem !important;
-
-        & span {
-            font-size: 1.3rem;
-        }
-    }
-
-
-    .skill {
-        margin-left: auto;
-        margin-right: auto;
-        height: fit-content;
-        width: 100vw !important;
-    }
-
-    .bannerSkill {
-        height: fit-content;
-        width: 100vw !important;
-    }
-
-    .infoSkill {
-        width: 100vw;
-        margin: 0 3rem;
-
-        font-size: 1rem;
-
-        & strong {
-            font-size: 1.2rem !important;
-        }
-
-        & p {
-            font-size: 1.2rem !important;
-            text-align: justify;
-        }
-    }
-
-    .infoSkill-soft {
-        width: 100vw !important;
-        height: fit-content;
-    }
-
-
-    #slideShow {
-        height: 10rem !important;
-        width: 20rem !important;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .slide-wrapper {
-        display: flex;
-        /* Quan trọng để tất cả slide nằm ngang */
-        width: calc(5 * 20rem) !important;
-        /* 5 là số lượng slide */
-        animation: slide 10s ease infinite;
-        /* Thời gian chạy */
-    }
-
-    .slide {
-        flex: 0 0 auto;
-        /* Đảm bảo mỗi slide chiếm không gian cố định */
-        width: 10rem !important;
-        height: 20rem !important;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
-
-    /* Animation keyframes */
-    @keyframes slide {
-        0% {
-            transform: translateX(0);
-            /* Hình 1 */
-        }
-
-        15% {
-            transform: translateX(0);
-            /* Hình 1 */
-        }
-
-        25% {
-            transform: translateX(-20rem);
-            /* Hình 2 */
-        }
-
-        30% {
-            transform: translateX(-20rem);
-            /* Hình 2 */
-        }
-
-        45% {
-            transform: translateX(-40rem);
-            /* Hình 3 */
-        }
-
-        50% {
-            transform: translateX(-40rem);
-            /* Hình 3 */
-        }
-
-        65% {
-            transform: translateX(-60rem);
-            /* Hình 4 */
-        }
-
-        75% {
-            transform: translateX(-60rem);
-            /* Hình 4 */
-        }
-
-        80% {
-            transform: translateX(-80rem);
-            /* Hình 5 */
-        }
-
-        95% {
-            transform: translateX(-80rem);
-            /* Hình 5 */
-        }
-
-        100% {
-            transform: translateX(0);
-            /* Quay về hình đầu */
-        }
-    }
-
-
-    .infoSkill-soft-slide {
-        width: 100%;
-        height: fit-content;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        position: relative;
-    }
-
-    .popup-soft-skill {
-        height: 3rem !important;
-        width: 15rem !important;
-        padding-right: 1rem;
-        background-color: var(--highlight-color);
-        border-radius: 2rem;
-        justify-content: space-between;
-        position: absolute;
-        top: 10%;
-        left: 5% !important;
-
-        & p {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        & .icon-popup {
-            height: 3rem !important;
-            width: 3rem !important;
-            background-color: red;
-            color: var(--highlight-color);
-            font-size: 1.2rem;
-            font-weight: 800;
-            border-radius: 2rem;
-            display: grid;
-            place-items: center;
-        }
-    }
-
-
-    .infoSkill-soft-content {
-        height: fit-content;
-        width: 100% !important;
-        text-align: left;
-
-        & .soft-name,
-        .soft-name-content {
-            font-size: 1rem !important;
-            font-weight: 400;
-            color: white;
-        }
-
-        & .soft-name {
-            font-size: 1.2rem !important;
-            text-indent: 3rem;
-            color: var(--text);
-            font-weight: 700;
-        }
-
-        & .soft-name-content {
-            text-align: justify;
-            line-height: 2rem;
-        }
-    }
-}
-
-
-/*
 ========================================================INTRO PAGES================================================
 */
 
@@ -1502,6 +1007,7 @@ main {
         align-items: flex-start;
         border: 1px solid var(--text-opacity);
         margin-bottom: 3rem;
+        pointer-events: all !important;
 
         & .col-name {
             width: 20%;
@@ -1552,6 +1058,7 @@ main {
                     display: grid;
                     place-items: center;
                     top: 50%;
+                    display: none;
 
                     &:hover {
                         background-color: var(--text-opacity);
@@ -1613,32 +1120,91 @@ main {
                 }
             }
         }
-
-        & .TaiLieuHocPhan-name {
-            font-size: 1.4rem;
-            color: var(--highlight-color);
-            font-weight: 700;
-            line-height: 3rem;
-            text-align: center;
-            padding: 3rem;
-
-            & span {
-                font-size: 2.5rem;
-            }
-        }
-
-        & .ds-TaiLieuHocPhan {
-            font-size: 1.8rem;
-            color: var(--text);
-            line-height: 3rem;
-            list-style: circle !important;
-        }
     }
 }
 
-.btn-Tailieu {
+.TaiLieuHocPhan-name {
+    font-size: 1.4rem;
+    color: var(--highlight-color);
+    font-weight: 500;
+    text-align: center;
+    padding: 3rem;
+    line-height: 2rem;
+
+    & span {
+        font-size: 2.2rem;
+        font-weight: 800;
+    }
+}
+
+.ds-TaiLieuHocPhan {
+    font-size: 1.8rem;
+    color: var(--text);
+    line-height: 3rem;
+    list-style: circle !important;
+}
+
+.ds-TaiLieuHocPhan .sub-list {
+    display: none;
+    /* Ẩn danh sách con mặc định */
+    padding-left: 2rem;
+    list-style: square;
+}
+
+.HocPhan {
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 2rem;
+
+    &:hover {
+        background-color: var(--text-opacity);
+    }
+}
+
+.HocPhan .toggle-btn {
+    position: absolute;
+    right: 0;
+    /* Đặt nút ở cuối dòng */
+    top: 0;
+    font-size: 3rem;
+    color: var(--highlight-color);
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.ds-TaiLieuHocPhan .sub-list {
+    max-height: 0;
+    /* Chiều cao ban đầu là 0 (ẩn) */
+    overflow: hidden;
+    /* Ẩn nội dung vượt quá */
+    transition: max-height 1s ease;
+    /* Hiệu ứng mượt */
+    padding-left: 2rem;
+    list-style: square;
+    display: block;
+}
+
+.HocPhan.open .sub-list {
+    max-height: 300px;
+    /* Chiều cao tối đa đủ để hiển thị danh sách con */
+}
+
+.HocPhan.open .toggle-btn {
+    transform: rotate(45deg);
+    /* Xoay nút thành dấu nhân (-) */
+}
+
+.HocPhan ul>li:hover {
+    background-color: var(--text-opacity);
+    color: var(--highlight-color);
+    transition: all 200ms ease-in-out;
+}
+
+/* Class chung cho tất cả các nút */
+.btn-Tailieu,
+.btn-Tailieu2 {
     position: fixed;
-    top: calc(100vh - 70%);
     right: 3%;
     height: 4rem;
     width: 20rem;
@@ -1646,49 +1212,612 @@ main {
     border-radius: 2rem;
     display: block;
     pointer-events: all !important;
+    transition: all 0.3s ease;
+}
 
-    &:hover p {
-        color: var(--highlight-color);
+/* Vị trí của nút, có thể thay đổi cho từng nút */
+.btn-Tailieu {
+    top: calc(100vh - 70%);
+}
+
+.btn-Tailieu2 {
+    top: calc(100vh - 60%);
+}
+
+/* Hiệu ứng hover của nút */
+.btn-Tailieu:hover p,
+.btn-Tailieu2:hover p {
+    color: var(--highlight-color);
+}
+
+/* Nội dung và icon trong nút */
+.btn-Tailieu a,
+.btn-Tailieu2 a {
+    justify-content: space-between;
+}
+
+.btn-Tailieu .icon,
+.btn-Tailieu2 .icon {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.btn-Tailieu p,
+.btn-Tailieu2 p {
+    font-size: 1.4rem;
+    color: var(--text);
+    padding-right: 1rem;
+}
+
+/* Nút đóng (cancel) */
+.btn-Tailieu #cancel-tailieu,
+.btn-Tailieu2 #cancel-tailieu {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: red;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+    display: none;
+}
+
+/* Hiển thị dấu X khi hover */
+.btn-Tailieu:hover #cancel-tailieu,
+.btn-Tailieu2:hover #cancel-tailieu {
+    display: flex;
+}
+
+
+
+/*
+==========================CSS FIX MOBILE AND TABLET============================
+*/
+
+@media only screen and (max-width:1203px) and (min-width:740px) {
+    header {
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 3rem;
+        align-items: flex-start;
+        background: var(--primary-color);
+        position: fixed;
+        padding-top: 0.5rem;
+        line-height: 0.5rem;
+
+        & .info {
+            height: fit-content;
+
+            & img {
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+
+            & p {
+                font-size: 1rem;
+            }
+
+            & span {
+                font-size: 0.8rem;
+            }
+        }
+
+        & nav {
+            position: absolute;
+            top: 2.5rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            font-size: 1.4rem;
+        }
+
+        & .tips {
+            & i {
+                font-size: 1.2rem;
+            }
+        }
     }
 
-    & a {
-        justify-content: space-between;
+    footer {
+        background: var(--primary-color);
+        font-size: 1rem;
+        height: fit-content !important;
+        padding: 2rem !important;
+
+        & .colGroup {
+            height: 20% !important;
+            width: 80% !important;
+
+            & .col {
+                width: 60% !important;
+                height: fit-content !important;
+                padding: 0.5rem;
+            }
+        }
     }
 
-    & .icon {
-        height: 4rem;
-        width: 4rem;
-        border-radius: 2rem;
-        background-color: var(--highlight-color);
-        color: var(--primary-color);
-        font-size: 2rem;
-        padding: 1rem;
+    main {
+        width: 100vw;
+        height: fit-content;
+
+        & .home {
+
+            & .hello {
+                width: 100vw;
+            }
+
+            & .detailMain {
+                width: 100vw;
+                flex-wrap: wrap;
+                height: 52rem;
+
+                & .detailMain-left,
+                .detailMain-right {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
     }
 
-    & p {
-        font-size: 1.4rem;
-        color: var(--text);
-        padding-right: 1rem;
+    .infoMe {
+        height: 20rem;
+        width: 70rem !important;
+        flex-wrap: wrap;
+        flex: 1;
+        margin: 0 auto;
+
+        & .infoMe-Box:first-of-type {
+            width: fit-content;
+            height: fit-content;
+
+            & img {
+                height: 40rem;
+                width: 30rem;
+            }
+        }
+
+        & .infoMe-Box:last-of-type {
+            height: fit-content;
+            position: absolute;
+            right: 0;
+
+            & p {
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+            }
+        }
+
     }
 
-    & #cancel-tailieu {
-        height: 2rem;
-        width: 2rem;
-        font-size: 1.5rem;
-        color: white;
-        background-color: red;
-        border-radius: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: -0.5rem;
-        right: -1rem;
-        display: none;
+    .skill {
+        margin-left: auto;
+        margin-right: auto;
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .bannerSkill {
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .infoSkill {
+        width: 100vw;
+        margin: 0 3rem;
+    }
+
+    .infoSkill-soft {
+        width: 100vw;
+    }
+
+    .project {
+        height: fit-content;
+        width: 100vw;
+
+        .project-content {
+            height: fit-content;
+            width: 100%;
+            flex-direction: column;
+
+            & .col-name {
+                width: 100%;
+            }
+
+            & .project-content-group {
+                width: 100%;
+            }
+        }
     }
 }
 
-.btn-Tailieu:hover #cancel-tailieu {
-    display: flex;
-    /* Hiện dấu X */
+@media screen and (max-width:739px) {
+    header {
+        background: var(--primary-color);
+        left: 0;
+        height: 4rem;
+        padding: 0;
+        width: 100vw;
+        justify-content: center;
+
+        & .info {
+            position: absolute;
+            top: 4rem !important;
+            left: 0.5rem;
+            width: fit-content;
+            height: fit-content;
+
+            & img {
+                height: 2rem;
+                width: 2rem;
+
+            }
+
+            & p,
+            span {
+                font-size: 0.8rem;
+            }
+        }
+
+        & .tips {
+            position: absolute;
+            top: 4rem !important;
+            right: 2rem;
+            width: fit-content;
+            height: fit-content;
+            font-size: 0.8rem;
+        }
+
+        & nav {
+            height: fit-content;
+            width: 100%;
+            font-size: 1.2rem;
+            border: none !important;
+            justify-content: space-evenly !important;
+
+            & ul>li {
+                width: fit-content;
+                padding: 2% 2%;
+                border: 1px solid var(--text-opacity);
+                border-radius: 2rem;
+            }
+        }
+
+
+    }
+
+    footer {
+        background: var(--primary-color);
+        font-size: 1rem;
+        height: fit-content !important;
+        padding: 2rem !important;
+
+        & .colGroup {
+            height: 20% !important;
+            width: 80% !important;
+
+            & .col {
+                width: 100% !important;
+                height: fit-content !important;
+                padding: 0.5rem;
+                font-size: 1.1rem;
+            }
+
+            & .col:last-child {
+                text-align: center;
+            }
+        }
+    }
+
+    main {
+        width: 100vw;
+        height: fit-content;
+
+
+        & .home {
+            width: 100vw;
+
+            & .hello {
+                width: 100vw;
+
+                & .textHello {
+                    & p:last-child {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            & .detailMain {
+                width: 100vw;
+                flex-wrap: wrap;
+                height: 52rem;
+
+                & .detailMain-left,
+                .detailMain-right {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                & .detailMain-right {
+                    & p {
+                        font-size: 1.3rem;
+                        line-height: 2rem;
+                    }
+
+                    & p:last-child {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            & .btnHome {
+                margin: 2rem auto !important;
+            }
+        }
+    }
+
+    .infoMe {
+        margin-top: 18rem !important;
+        height: fit-content !important;
+        width: 100vw !important;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+
+    .infoMe-Box {
+        width: 100% !important;
+        position: static !important;
+    }
+
+    .textHello {
+        z-index: 1;
+    }
+
+    .infoMe-Box:first-of-type img {
+        height: 30rem !important;
+        width: 30rem !important;
+        object-fit: cover;
+        background-position: center center;
+        position: absolute !important;
+        top: -30rem !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+        z-index: -100;
+    }
+
+    .infoMe-Box:last-of-type p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        padding-bottom: 0.5rem !important;
+
+        & span {
+            font-size: 1.3rem;
+        }
+    }
+
+
+    .skill {
+        margin-left: auto;
+        margin-right: auto;
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .bannerSkill {
+        height: fit-content;
+        width: 100vw !important;
+    }
+
+    .infoSkill {
+        width: 100vw;
+        margin: 0 3rem;
+
+        font-size: 1rem;
+
+        & strong {
+            font-size: 1.2rem !important;
+        }
+
+        & p {
+            font-size: 1.2rem !important;
+            text-align: justify;
+        }
+    }
+
+    .infoSkill-soft {
+        width: 100vw !important;
+        height: fit-content;
+    }
+
+
+    #slideShow {
+        height: 10rem !important;
+        width: 20rem !important;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide-wrapper {
+        display: flex;
+        /* Quan trọng để tất cả slide nằm ngang */
+        width: calc(5 * 20rem) !important;
+        /* 5 là số lượng slide */
+        animation: slide 10s ease infinite;
+        /* Thời gian chạy */
+    }
+
+    .slide {
+        flex: 0 0 auto;
+        /* Đảm bảo mỗi slide chiếm không gian cố định */
+        width: 10rem !important;
+        height: 20rem !important;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+
+    /* Animation keyframes */
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+            /* Hình 1 */
+        }
+
+        15% {
+            transform: translateX(0);
+            /* Hình 1 */
+        }
+
+        25% {
+            transform: translateX(-20rem);
+            /* Hình 2 */
+        }
+
+        30% {
+            transform: translateX(-20rem);
+            /* Hình 2 */
+        }
+
+        45% {
+            transform: translateX(-40rem);
+            /* Hình 3 */
+        }
+
+        50% {
+            transform: translateX(-40rem);
+            /* Hình 3 */
+        }
+
+        65% {
+            transform: translateX(-60rem);
+            /* Hình 4 */
+        }
+
+        75% {
+            transform: translateX(-60rem);
+            /* Hình 4 */
+        }
+
+        80% {
+            transform: translateX(-80rem);
+            /* Hình 5 */
+        }
+
+        95% {
+            transform: translateX(-80rem);
+            /* Hình 5 */
+        }
+
+        100% {
+            transform: translateX(0);
+            /* Quay về hình đầu */
+        }
+    }
+
+
+    .infoSkill-soft-slide {
+        width: 100%;
+        height: fit-content;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .popup-soft-skill {
+        height: 3rem !important;
+        width: 15rem !important;
+        padding-right: 1rem;
+        background-color: var(--highlight-color);
+        border-radius: 2rem;
+        justify-content: space-between;
+        position: absolute;
+        top: 10%;
+        left: 5% !important;
+
+        & p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        & .icon-popup {
+            height: 3rem !important;
+            width: 3rem !important;
+            background-color: red;
+            color: var(--highlight-color);
+            font-size: 1.2rem;
+            font-weight: 800;
+            border-radius: 2rem;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+
+    .infoSkill-soft-content {
+        height: fit-content;
+        width: 100% !important;
+        text-align: left;
+
+        & .soft-name,
+        .soft-name-content {
+            font-size: 1rem !important;
+            font-weight: 400;
+            color: white;
+        }
+
+        & .soft-name {
+            font-size: 1.2rem !important;
+            text-indent: 3rem;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        & .soft-name-content {
+            text-align: justify;
+            line-height: 2rem;
+        }
+    }
+
+    .project {
+        height: fit-content;
+        width: 100vw;
+
+        .project-content {
+            height: fit-content;
+            width: 100%;
+            flex-direction: column;
+
+            & .col-name {
+                width: 100%;
+            }
+
+            & .project-content-group {
+                width: 100%;
+            }
+        }
+    }
+
+    .carousel {
+        width: 100vw !important;
+        height: 20rem !important;
+
+        & img {
+            height: 18rem !important;
+            width: 95% !important;
+        }
+    }
 }
