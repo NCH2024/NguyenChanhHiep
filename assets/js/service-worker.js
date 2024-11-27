@@ -6,8 +6,6 @@ const urlsToCache = [
     '/error.html',  // Trang lỗi
     '/project.html',  // Trang dự án
     '/css/style.css',  // Tệp CSS
-    '/js/main.js',  // Tệp JS chính
-    '/js/service-worker.js',  // Tệp Service Worker
     '/images/QR-VCB.jpg',  // Hình ảnh QR
     '/images/bg-home.jpg',  // Hình ảnh nền trang chủ
     '/images/me-Home.png',  // Hình ảnh nền
