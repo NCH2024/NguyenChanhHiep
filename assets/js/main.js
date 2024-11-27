@@ -126,38 +126,34 @@ window.onload = function () {
 
 
 /* Save cache brower */
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('js/service-worker.js')  // Đảm bảo đường dẫn đúng
-            .then((registration) => {
-                console.log('Service Worker đã được đăng ký: ', registration.scope);
-            }).catch((error) => {
-                console.log('Đăng ký Service Worker thất bại: ', error);
-            });
-    });
-}
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', () => {
+//         navigator.serviceWorker.register('js/service-worker.js')  
+//             .then((registration) => {
+//                 console.log('Service Worker đã được đăng ký: ', registration.scope);
+//             }).catch((error) => {
+//                 console.log('Đăng ký Service Worker thất bại: ', error);
+//             });
+//     });
+// }
 
 /* Toi uu load anh */
 document.addEventListener("DOMContentLoaded", function () {
-    // Lấy tất cả các thẻ <img> có thuộc tính 'data-src'
     const images = document.querySelectorAll('img[data-src]');
 
-    // Tạo một instance của IntersectionObserver để theo dõi hình ảnh
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const image = entry.target;
-                // Thay src bằng data-src
                 image.src = image.getAttribute('data-src');
-                // Sau khi tải xong, ngừng theo dõi hình ảnh này
                 observer.unobserve(image);
             }
         });
     }, {
-        rootMargin: '0px 0px 100px 0px' // Tải hình ảnh sớm khi gần vào viewport
+        rootMargin: '0px 0px 100px 0px'
     });
 
-    // Bắt đầu theo dõi tất cả các hình ảnh
+
     images.forEach(image => {
         observer.observe(image);
     });
