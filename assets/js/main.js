@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*Open list */
+
 document.querySelectorAll(".HocPhan").forEach((item) => {
     item.addEventListener("click", function () {
         this.classList.toggle("open"); // Thêm hoặc xóa class 'open'
@@ -123,16 +124,16 @@ document.querySelectorAll(".HocPhan").forEach((item) => {
 
 
 /* Save cache brower */
-// if ('serviceWorker' in navigator) {
-//     window.addEventListener('load', () => {
-//         navigator.serviceWorker.register('js/service-worker.js')  
-//             .then((registration) => {
-//                 console.log('Service Worker đã được đăng ký: ', registration.scope);
-//             }).catch((error) => {
-//                 console.log('Đăng ký Service Worker thất bại: ', error);
-//             });
-//     });
-// }
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('js/service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker đã được đăng ký: ', registration.scope);
+            }).catch((error) => {
+                console.log('Đăng ký Service Worker thất bại: ', error);
+            });
+    });
+}
 
 /* Toi uu load anh */
 document.addEventListener("DOMContentLoaded", function () {
