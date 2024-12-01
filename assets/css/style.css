@@ -679,9 +679,8 @@ main {
     & .infoMe-Box:last-of-type {
         height: fit-content;
         width: 70%;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         line-height: 2rem;
-        text-align: justify;
         text-indent: 1.7rem;
         padding: 3rem;
 
@@ -707,7 +706,7 @@ main {
 }
 
 .skill {
-    margin-top: 2rem;
+    margin: 2rem 0;
     height: fit-content;
     width: var(--width-default);
     font-size: 3rem;
@@ -773,20 +772,20 @@ main {
     width: 100%;
     list-style: decimal !important;
     text-align: left;
-    font-weight: 200;
+    font-size: 1.6rem;
+    font-weight: 500;
     line-height: 2rem;
     padding: 0 5rem;
 
     & p {
-        font-style: italic;
         text-indent: 3rem;
         padding-bottom: 1.5rem;
     }
 
     & strong {
-        font-weight: 500;
+        font-weight: 700;
         color: var(--second-color);
-        font-style: normal;
+        font-size: 1.9rem;
     }
 
 }
@@ -1123,6 +1122,60 @@ main {
     }
 }
 
+.clip {
+    flex-direction: column;
+}
+
+
+
+.project-clip {
+    padding: 2rem;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 2rem;
+
+    & span {
+        font-size: 1.3rem;
+        font-style: italic;
+        text-align: center;
+        color: var(--highlight-color);
+    }
+
+
+    & .clip-name,
+    iframe {
+        width: 50%;
+    }
+
+    & p {
+        padding: 0 4rem;
+    }
+
+    & p:first-of-type {
+        font-size: 2rem;
+        font-weight: 600;
+        height: 5rem;
+        width: 100%;
+        line-height: 2.5rem;
+    }
+
+    & p:last-of-type {
+        padding-top: 2rem;
+        height: fit-content;
+        width: 100%;
+    }
+}
+
+.TaiLieuHocPhan {
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+}
+
 .TaiLieuHocPhan-name {
     font-size: 1.4rem;
     color: var(--highlight-color);
@@ -1130,6 +1183,10 @@ main {
     text-align: center;
     padding: 3rem;
     line-height: 2rem;
+
+    & p:last-of-type {
+        padding-top: 3rem;
+    }
 
     & span {
         font-size: 2.2rem;
@@ -1139,6 +1196,12 @@ main {
 
 .ds-TaiLieuHocPhan {
     font-size: 1.8rem;
+    width: 90%;
+    padding: 0 10rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     color: var(--text);
     line-height: 3rem;
     list-style: circle !important;
