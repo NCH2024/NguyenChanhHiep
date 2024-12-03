@@ -1348,6 +1348,8 @@ main {
 */
 
 @media only screen and (max-width:1203px) and (min-width:740px) {
+
+
     header {
         flex-wrap: wrap;
         width: 100vw;
@@ -1506,6 +1508,38 @@ main {
 }
 
 @media screen and (max-width:739px) {
+    .project-clip {
+        flex-wrap: wrap;
+
+        & iframe {
+            height: 18rem !important;
+            width: 100% !important;
+        }
+
+        & .clip-name {
+            width: 100% !important;
+        }
+
+        & p {
+            padding: 0 1rem !important;
+        }
+
+        & p:first-of-type {
+            height: fit-content;
+        }
+    }
+
+    .ds-TaiLieuHocPhan {
+        padding: 0 2rem;
+        font-size: 1.4rem;
+    }
+
+    .btn-Tailieu,
+    .btn-Tailieu2 {
+        display: none;
+    }
+
+
     header {
         background: var(--primary-color);
         left: 0;
